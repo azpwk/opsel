@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cssi.css">
+    <title>azpwk</title>
+</head>
+<body>
+    <div>
+
+        <div class="box">
+            <head>
+                <nav>
+                    <span style="margin-right: 20px;">azpwkk</span>
+                    > <a href="#ssh" onclick="ssh_art()">ssh</a>
+                    > <a href="#vpn" onclick="vpn_art()">vpn</a>
+                    > <a href="#bug">bug</a>
+                </nav>
+            </head>
+        </div>
+
+        <div class="box-menu" id="welcome">
+            <div class="terminal" >
+                <p>Welcome</p>
+                <p>$ ls</p>
+                <p>bug.txt  payload.txt  apps  host</p>
+                <p>$ cd apps</p>
+                <p>$ ls</p>
+                <p>subfile1.txt  subfile2.txt</p>
+            </div>
+        </div>
+
+        <!-- ssh -->
+        <div class="box-menu" id="ssh">
+            <div class="terminal"><div id="ssh_art"></div></div>
+        </div>
+        <div class="boxs">
+            <div class="terminal" id="ssh_payload"  style="display: none;">
+                <h3>contoh<span class="term">payload</span></h3><br>               
+                <p class="term">payload ssh WS non-TLS</p>
+                <p>GET / HTTP/1.1[crlf]Host: [host] [crlf]Upgrade: websocket[crlf][crlf]</p><br>
+                <p class="term">payload ssh WS TLS</p>
+                <p>GET wss//ip/bug.com/ HTTP/1.1[crlf]Host: [host] [crlf]Upgrade: websocket[crlf][crlf]</p><br>
+                <h3>Proxy:<span class="term">1.1.1.1:80/443</span></h3>
+            </div>
+        </div>
+
+        <!-- vpn -->
+        <div class="box-menu" id="vpn">
+            <div class="terminal"><div id="vpn_art"></div></div>
+        </div>
+        <div class="boxs">
+            <div class="terminal">
+                <p>Untuk format yaml akun vmess & trojan wss bisa contoh format di bawah ini:</p>
+            </div>
+        </div>
+        <div class="boxs">
+            <div class="terminal" id="vmess"  style="display: none;">
+                <!-- 443 -->
+                <h3>Vmess Custom Path<span class="term">WSS HTTPS/TLS (Port 443)</span></h3><br>
+                <p>- name: Vmess WSS (443)</p>
+                <p>server: BUG_IP</p>    
+                <p>port: 443</p>    
+                <p>type: vmess</p>    
+                <p>uuid: UUID</p>    
+                <p>alterId: 0</p>    
+                <p>cipher: auto</p>    
+                <p>tls: true</p>    
+                <p>skip-cert-verify: true</p>    
+                <p>servername: BUG_HOST</p>    
+                <p>network: ws</p>
+                <p>ws-opts:</p>
+                <p>path: GET-:wss://BUG_HOST/PATH/</p>
+                <p>headers:</p>
+                <p>Host: HOST_AKUN</p>
+                <p>udp: true</p><br>
+                <!-- 80 -->
+                <h3>Vmess Custom Path<span class="term">WS Non TLS/HTTP (Port 80)</span></h3><br>
+                <p>- name: Vmess WSS (80)</p>
+                <p>server: BUG_IP</p>    
+                <p>port: 443</p>    
+                <p>type: vmess</p>    
+                <p>uuid: UUID</p>    
+                <p>alterId: 0</p>    
+                <p>cipher: auto</p>    
+                <p>tls: true</p>    
+                <p>skip-cert-verify: true</p>    
+                <p>servername: BUG_HOST</p>    
+                <p>network: ws</p>
+                <p>ws-opts:</p>
+                <p>path: GET-:wss://BUG_HOST/PATH/</p>
+                <p>headers:</p>
+                <p>Host: HOST_AKUN</p>
+                <p>udp: true</p><br>
+
+            </div>
+        </div>
+        <div class="boxs">
+            <div class="terminal" id="trojan" style="display: none;">
+                                <!-- 443 -->
+                                <h3>trojan Custom Path<span class="term">WSS HTTPS/TLS (Port 443)</span></h3><br>
+                                <p>- name: trojan WSS (443)</p>
+                                <p>server: BUG_IP</p>    
+                                <p>port: 443</p>    
+                                <p>type: vmess</p>    
+                                <p>uuid: UUID</p>    
+                                <p>alterId: 0</p>    
+                                <p>cipher: auto</p>    
+                                <p>tls: true</p>    
+                                <p>skip-cert-verify: true</p>    
+                                <p>servername: BUG_HOST</p>    
+                                <p>network: ws</p>
+                                <p>ws-opts:</p>
+                                <p>path: GET-:wss://BUG_HOST/PATH/</p>
+                                <p>headers:</p>
+                                <p>Host: HOST_AKUN</p>
+                                <p>udp: true</p><br>
+                                <!-- 80 -->
+                                <h3>trojan Custom Path<span class="term">WS Non TLS/HTTP (Port 80)</span></h3><br>
+                                <p>- name: trojan WSS (80)</p>
+                                <p>server: BUG_IP</p>    
+                                <p>port: 443</p>    
+                                <p>type: vmess</p>    
+                                <p>uuid: UUID</p>    
+                                <p>alterId: 0</p>    
+                                <p>cipher: auto</p>    
+                                <p>tls: true</p>    
+                                <p>skip-cert-verify: true</p>    
+                                <p>servername: BUG_HOST</p>    
+                                <p>network: ws</p>
+                                <p>ws-opts:</p>
+                                <p>path: GET-:wss://BUG_HOST/PATH/</p>
+                                <p>headers:</p>
+                                <p>Host: HOST_AKUN</p>
+                                <p>udp: true</p><br>
+            </div>
+        </div>
+
+
+        <!-- bug -->
+        <div class="box-menu" id="bug">
+            <div class="box-term">
+                <h3 style="color: azure;">Bug > 
+                    <a href="axis.html" id="axis_game">axis</a> > 
+                    <a href="axis.html" id="axis_game">xl</a> > 
+                    <a href="axis.html" id="axis_game">telkomsel</a> > 
+                </h3>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="box-menu">
+            <div class="terminal">
+            <footer>
+                <h4>copyright<span class="term">@iming</span></h4>
+                
+            </footer> 
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<script>
+    function ssh_art(){
+        var welcome = document.getElementById('welcome').style.display=('none');
+        var ssh_payload = document.getElementById('ssh_payload').style=('inline');
+        var fileContentElement = document.getElementById('ssh_art');
+        fetch('./txt/ssh.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Pecahkan teks menjadi baris dan tambahkan spasi di setiap baris
+                var lines = data.split('\n');
+                fileContentElement.innerHTML = lines.map(line => line + '<br>').join('');
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+
+    function vpn_art() {
+        var welcome = document.getElementById('welcome').style.display=('none');
+        var ssh_payload = document.getElementById('vmess').style=('inline');
+        var ssh_payload = document.getElementById('trojan').style=('inline');
+
+        var fileContentElement = document.getElementById('vpn_art');
+        fetch('./txt/vpn.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Pecahkan teks menjadi baris dan tambahkan spasi di setiap baris
+                var lines = data.split('\n');
+                fileContentElement.innerHTML = lines.map(line => line + '<br>').join('');
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+</script>
+
+</html>

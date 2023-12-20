@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,400&family=Roboto+Condensed:wght@100;400;500&display=swap');
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+
+body {
+    margin: 0;
+    background-color: #2d2d2d; /* Warna latar belakang */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #2d2d2d, #1e1e1e);
+    color: #f0f0f0;
+    padding: 20px;
+    transition: top 0.3s ease-in-out; 
+  }
+
+  nav a {
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #f0f0f0;
+  }
+
+  .terminal {
+    margin-top: 100px;
+    background: linear-gradient(to bottom, #2d2d2d, #1e1e1e);
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f0f0f0;
+    /* padding: 20px; */
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .boxs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .box-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 50px;
+  }
+  .box-term {
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+/* conf */
+#ssh_art,#vpn_art,#ssh_payload,#vmess,#vless,#trojan {
+    margin-left: 10px;
+}
+p,span,h1,h2,h3 {
+    margin-left: 10px;
+}
+p{
+    font-size: smaller;
+}
+textarea {
+    max-width: 260px;
+    width: 100%;
+    resize: none;
+    background: linear-gradient(to bottom, #2d2d2d, #1e1e1e);
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: rgb(15, 128, 0);
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+a {
+    /* border: 1px solid #555;
+    border-radius: 5px; */
+    text-decoration: none;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(15, 128, 0);
+}
+.term {
+    color: rgb(15, 128, 0);
+}
+footer {
+    text-align: center;
+}
