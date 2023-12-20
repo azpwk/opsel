@@ -19,7 +19,7 @@
         <div class="box-menu" id="bug">
             <div class="box-term">
                 <h3 style="color: azure;">Bug telkomsel > 
-                    <a onclick="tsel_game()" id="tsel_game">Read</a>
+                    <a onclick="tsel_bug()" id="tsel">Read</a>
                 </h3>
                 <textarea name="textarea" id="textarea" cols="0" rows="0"></textarea>
             </div>
@@ -38,9 +38,9 @@
 </body>
 <script>
     //    
-    function tsel_game() {
-        let tsel_game = document.getElementById ('tsel_game');
-        axis_game.onclick=('');
+    function tsel_bug() {
+        let tsel = document.getElementById ('tsel');
+        tsel.onclick=('');
 
         fetch('./txt/tsel.txt')
             .then(response => {
