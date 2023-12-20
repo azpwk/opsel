@@ -6,11 +6,11 @@ sc
 https://github.com/boychongzen18/Bug-Host-All-Operator/blob/master/XLOpokAktif.txt
 
 
-apps.skypeassets.com	23.0.212.254	FALSE
-origin-secure.skypeassets.com	204.9.163.185	FALSE
-secure.skypeassets.com	184.30.20.136	FALSE
-www.skypeassets.com	184.86.251.151	FALSE
-ads.skypeassets.com	none
-beta.skypeassets.com	none	
-static.skypeassets.com	none
-skypeassets.com     none
+apps.skypeassets.com
+origin-secure.skypeassets.com
+secure.skypeassets.com
+www.skypeassets.com
+ads.skypeassets.com
+beta.skypeassets.com
+static.skypeassets.com
+skypeassets.com
