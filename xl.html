@@ -42,7 +42,7 @@
         let xl = document.getElementById ('xl');
         tsel.onclick=('');
 
-        fetch('./txt/xl.txt')
+        fetch('https://raw.githubusercontent.com/azpwk/opsel/main/txt/xl.txt')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
