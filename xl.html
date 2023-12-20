@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cssi.css">
+    <title>bug xl</title>
+</head>
+<body>
+
+        <div class="box">
+            <head>
+                <nav>
+                    <a href="index.html">Home</a>
+                </nav>
+            </head>
+        </div>
+
+        <div class="box-menu" id="bug">
+            <div class="box-term">
+                <h3 style="color: azure;">Bug xl > 
+                    <a onclick="xl_bug()" id="xl">Read</a>
+                </h3>
+                <textarea name="textarea" id="textarea" cols="0" rows="0"></textarea>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="box-menu">
+            <div class="terminal">
+            <footer>
+                <h4>copyright<span class="term">@iming</span></h4>
+                
+            </footer> 
+            </div>
+
+        </div>
+</body>
+<script>
+    //    
+    function xl_bug() {
+        let xl = document.getElementById ('xl');
+        tsel.onclick=('');
+
+        fetch('./txt/xl.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+                
+            })
+
+            .then(text => {
+                var textarea = document.getElementById("textarea");
+                textarea.value = ""; // Reset textarea
+
+                function ketikHuruf(index) {
+                    if (index < text.length) {
+                        textarea.value += text.charAt(index);
+                        // Check if the height of the textarea exceeds its scroll height
+                        if (textarea.scrollHeight > textarea.offsetHeight) {
+                            textarea.rows += 1; // Increase the number of rows
+                        }
+
+                        textarea.scrollTop = textarea.scrollHeight; // Auto scroll to bottom
+                        index++;
+
+                        setTimeout(function () {
+                            ketikHuruf(index);
+                        }, 50); // Ganti durasi di sini (dalam milidetik)
+                    }
+                }
+
+                ketikHuruf(0);
+            })
+            .catch(error => console.error('There was a problem with the fetch operation:', error));
+
+            
+    }
+    
+    //
+</script>
+</html>
