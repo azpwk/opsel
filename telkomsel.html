@@ -42,7 +42,7 @@
         let tsel_game = document.getElementById ('tsel_game');
         axis_game.onclick=('');
 
-        fetch('./txt/tselall.txt')
+        fetch('./txt/tsel.txt')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
