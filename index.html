@@ -51,7 +51,7 @@
             <div class="terminal"><div id="vpn_art"></div></div>
         </div>
         <div class="boxs">
-            <div class="terminal">
+            <div class="terminal" id="vpnws"  style="display: none;">
                 <p>Untuk format yaml akun vmess & trojan wss bisa contoh format di bawah ini:</p>
             </div>
         </div>
@@ -191,6 +191,7 @@
         var welcome = document.getElementById('welcome').style.display=('none');
         var ssh_payload = document.getElementById('vmess').style=('inline');
         var ssh_payload = document.getElementById('trojan').style=('inline');
+        var ssh_payload = document.getElementById('vpnws').style=('inline');
 
         var fileContentElement = document.getElementById('vpn_art');
         fetch('./txt/vpn.txt')
